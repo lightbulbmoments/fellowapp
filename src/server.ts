@@ -8,7 +8,7 @@ import app from "./app";
 app.use(errorHandler());
 
 /**
- * Start Express server. tset
+ * Start Express server.
  */
 const server = app.listen(app.get("port"), () => {
   console.log(
