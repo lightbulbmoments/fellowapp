@@ -1,11 +1,17 @@
 import errorHandler from "errorhandler";
 
 import app from "./app";
+import candidate from "./manager/candidate";
 
 /**
  * Error Handler. Provides full stack - remove for production
  */
 app.use(errorHandler());
+	
+
+/*API Router config*/
+app.use('/candidate', candidate)
+
 
 /**
  * Start Express server.
