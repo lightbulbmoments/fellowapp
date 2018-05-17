@@ -1,7 +1,9 @@
 import errorHandler from "errorhandler";
 
 import app from "./app";
-import candidate from "./manager/candidate";
+import candidate from "./controllers/candidate";
+import client from "./controllers/client";
+
 import DbClient from "./manager/DbClient";
 /**
  * Error Handler. Provides full stack - remove for production
@@ -11,6 +13,7 @@ app.use(errorHandler());
 
 /*API Router config*/
 app.use("/candidate", candidate);
+app.use("/client", client);
 
 /**
  * Start Express server.
